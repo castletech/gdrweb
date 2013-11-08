@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>iGDR
+</title>
+<!-- DataTables CSS -->
+<!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"> -->
+
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready( function() {
+  var oTable = $('#mytable').dataTable( {
+	"aLengthMenu": [[10, 50, 100, 500, -1], [10, 50, 100, 500, "All"]],
+	"sPaginationType": "full_numbers",
+	"sAjaxSource": "final.txt",
+	"aoColumns": [
+      { "mData": "Vendor Name" },
+      { "mData": "Vendor Code" },
+      { "mData": "Basics #" },
+      { "mData": "English Description (IM13)" },
+      { "mData": "Vendor Product Code" },
+      { "mData": "Marketing VPC" },
+      { "mData": "GTIN" }
+
+    ]
+  } );
+} );
+</script>
+
+
+
+<style type="text/css" title="currentStyle">
+@import "demo_table.css";
+@import "demo_page.css";
+</style>
+
+</head>
+
+<body>
+
+<table width="80%" align="center">
+	<thead>
+		<tr>
+			<th>
+			<img src="header.bmp">
+			</th>
+		</tr>
+		<tr>
+			<th>
+			<font size="6" face="terminal">
+			Interactive GDR
+			</font>
+			</th>
+		</tr>
+		<tr align="left">
+			<th width="10%" align="left" valign="middle">
+			<img src="http://openclipart.org/image/800px/svg_to_png/2484/molumen_Exclamation_icons_4.png" height="60" width="60">
+			</th>
+			<th width="90%" align="left" valign="middle">
+			Use the SEARCH bar on the right to filter data.
+			</th>
+		</tr>
+		<tr>
+			<th>
+			<img src="http://openclipart.org/image/800px/svg_to_png/2484/molumen_Exclamation_icons_4.png" height="60" width="60">
+			Sort columns in ascending or descending order by clicking the column name.
+			</th>
+		</tr>
+		<tr>
+			<th>
+			<img src="http://openclipart.org/image/800px/svg_to_png/2484/molumen_Exclamation_icons_4.png" height="60" width="60">
+			Go to the NEXT PAGE using the menu in the bottom right.
+			</th>
+		</tr>
+		<tr>
+			<th>
+			<table id="mytable" class="display">
+							<thead>
+								<tr bgcolor="#FFFF00">
+						            		<th>Vendor Name</th>
+									<th>Vendor Code</th>
+									<th>Basics #</th>
+									<th>English Description (IM13)</th>
+									<th>Vendor Product Code</th>
+									<th>Marketing VPC</th>
+									<th>GTIN</th>
+							        </tr>
+							</thead>
+						    <tbody>
+						    </tbody>
+			</table>
+			</th>
+		</tr
+	</thead>
+</table>
+</html>
+</head>
